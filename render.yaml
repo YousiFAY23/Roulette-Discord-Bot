@@ -1,11 +1,12 @@
 services:
-  - type: web
+  - type: worker
     name: discord-bot
     env: node
+    nodeVersion: 18
     region: frankfurt
     plan: free
     buildCommand: "npm install"
-    startCommand: "node index.js"
+    startCommand: "npm start"
     envVars:
       - key: TOKEN
         sync: false
