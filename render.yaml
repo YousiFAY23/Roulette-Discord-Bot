@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: discord-bot
+    env: node
+    region: frankfurt
+    plan: free
+    buildCommand: "npm install"
+    startCommand: "node index.js"
+    envVars:
+      - key: TOKEN
+        sync: false
+      - key: MONGO_URL
+        sync: false
+      - key: PORT
+        value: 3000
+      - key: URL
+        sync: false
